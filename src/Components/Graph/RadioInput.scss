@@ -1,0 +1,19 @@
+@import '../../mixins.scss';
+
+.radioInput {
+  @include onMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__label {
+    @include onMobile {
+      font-size: 12px;
+    }
+
+    &__input {
+      margin: 0;
+    }
+  }
+}

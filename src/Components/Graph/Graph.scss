@@ -1,0 +1,16 @@
+@import './GraphItem.scss';
+@import './RadioInput.scss';
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include onMobile {
+    flex-direction: row;
+    height: 380px;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0 0 20px 0;
+  }
+}

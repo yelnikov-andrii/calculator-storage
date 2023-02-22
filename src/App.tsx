@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Ranges } from './Components/Ranges/Ranges';
+import { Graph } from './Components/Graph/Graph';
+import { useInput } from './hooks/useInput';
+import { InputContext } from './context/context';
 
 function App() {
+  const storage = useInput(100);
+  const transfer = useInput(500);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InputContext.Provider value={{storage, transfer}}>
+      <div className="App">
+        <Ranges />
+        <Graph />
+      </div>
+    </InputContext.Provider>
   );
 }
 

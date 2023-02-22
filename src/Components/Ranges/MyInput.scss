@@ -1,0 +1,26 @@
+.myInput {
+  display: flex;
+  gap: 10px;
+
+  &__block {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__txt {
+    font-size: 20px;
+    color: teal;
+  }
+
+  &__range {
+    width: 70%;
+  }
+
+  &__value {
+    width: 40px;
+    padding: 10px;
+    font-size: 14px;
+    color: teal;
+  }
+}

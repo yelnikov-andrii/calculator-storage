@@ -1,6 +1,10 @@
 @import '../../mixins.scss';
 
 .radioInput {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
   @include onMobile {
     display: flex;
     justify-content: space-between;
